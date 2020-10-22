@@ -760,11 +760,11 @@ a {
 
 /* Точки (булиты) */
 
-.slick-dots {
+.review__slider .slick-dots {
   display: none;
 }
 
-.slick-list {
+.review__slider .slick-list {
   padding: 20px;
 }
 
@@ -928,5 +928,114 @@ a {
 }
 
 /*=================================================================*/
+
+/*Ceo section*/
+
+/*=================================================================*/
+
+.ceo {
+  padding-bottom: 150px;
+}
+
+.ceo__slider {
+  position: relative;
+  /* Элемент точки */
+}
+
+.ceo__slider .slick-list {
+  overflow: hidden;
+}
+
+.ceo__slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.ceo__slider .slick-dots li button {
+  font-size: 0;
+  margin-bottom: 17px;
+  opacity: 0.25;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: #ff7171;
+  background: -webkit-gradient(linear, left top, right top, from(#ff7171), to(#ff8862));
+  background: -o-linear-gradient(left, #ff7171 0%, #ff8862 100%);
+  background: linear-gradient(90deg, #ff7171 0%, #ff8862 100%);
+  -webkit-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+.ceo__slider .slick-dots {
+  display: inline-block;
+  position: absolute;
+  right: -10%;
+  top: 30%;
+}
+
+.ceo__slider .slick-dots li.slick-active button {
+  opacity: 1;
+}
+
+.ceo__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.ceo__img {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 50%;
+  flex: 1 0 50%;
+}
+
+.ceo__img img {
+  width: 100%;
+}
+
+.ceo__info {
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-left: 20px;
+}
+
+.ceo__title {
+  font-family: Gilroy-bold;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.ceo__text {
+  line-height: 150%;
+  overflow-y: auto;
+}
+
+/*=================================================================*/
+
+/*=================================================================*/
+
+/*Footer section*/
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
 
 /*=================================================================*/
