@@ -613,6 +613,53 @@ $color: rgb(255,113,113);
 }
 /*=================================================================*/
 /*=================================================================*/
+/*Photo section*/
+/*=================================================================*/
+.main {
+
+	&__photo {
+	}
+}
+.photo {
+
+	&__title {
+		font-family: Gilroy-semibold;
+		font-size: 30px;
+		text-align: center;
+		margin: auto;
+		width: 60%;
+		& span{
+			color: $color;
+		}
+	}
+
+	&__grid {
+		margin-top: 70px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		grid-template-areas: 
+				"grid1 grid1 grid2 grid3"
+				"grid1 grid1 grid4 grid4"
+				"grid5 grid6 grid4 grid4";
+	}
+
+	&__item {
+		margin: 10px;
+		&:nth-child(1){grid-area: grid1;}
+		&:nth-child(2){grid-area: grid2;}
+		&:nth-child(3){grid-area: grid3;}
+		&:nth-child(4){grid-area: grid4;}
+		&:nth-child(5){grid-area: grid5;}
+		&:nth-child(6){grid-area: grid6;}
+		border-radius: 14px;
+	}
+	& img{
+		width: 100%;
+	}
+}
+
+/*=================================================================*/
 /*Gift section*/
 /*=================================================================*/
 .gift {
@@ -761,23 +808,55 @@ $color: rgb(255,113,113);
 /*=================================================================*/
 /*Footer section*/
 .footer {
-
+	background: rgb(255,113,113);
+	background: linear-gradient(90deg, rgba(255,113,113,1) 0%, rgba(255,136,98,1) 100%);
+	color: #fff;
+	padding: 49px 0 49px;
 	&__logo {
+		font-family: Gilroy-bold;
+		font-size: 28px;
 	}
 
 	&__link {
+		padding: 30px 0 35px;
+		// border-bottom: 1px solid #fff;
+		position: relative;
+		&::after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 1px;
+			background: #fff;
+			opacity: 0.3
+
+		}
 	}
 
 	&__list {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
+		display: grid;
+		grid-template-columns: repeat(3, 2fr) 1fr;
+		grid-template-rows: repeat(4, 1fr);
+		
 	}
 
 	&__point {
+		display: inline-block;
+		&:nth-child(11){
+			grid-column-start: 4;
+			grid-row-start: 5;
+		}
+		&:nth-child(16){
+			grid-column-start: 4;
+			grid-row-start: 4;
+		}
 	}
 
 	&__nav {
+		display: grid;
+		grid-template-columns: 4fr 2fr repeat(3, 1fr);
+		font-size: 16px;
+		padding-top: 20px;
 	}
 }
 /*=================================================================*/
