@@ -64,7 +64,7 @@ let { src, dest } = require('gulp'),
 			)
 			.pipe(
 				autoprefixer({
-					grid: true,
+					grid: false,
 					overrideBrowserslist: ['last 5 versions'],
 					cascade: true
 				})
